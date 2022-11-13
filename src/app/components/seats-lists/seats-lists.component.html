@@ -1,0 +1,12 @@
+<button
+  type="button"
+  [ngClass]="{
+    'btn-dark': seat.hasBooked,
+    'btn-success': seat.hasActive,
+    'btn-light': !seat.hasActive
+  }"
+  class="btn btn-sm btn-fix"
+  (click)="onClick(seat)"
+>
+  {{ seat.id }}
+</button>

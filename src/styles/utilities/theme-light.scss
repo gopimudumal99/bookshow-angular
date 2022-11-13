@@ -1,0 +1,414 @@
+:root {
+  --primary-theme-color: #4e3eb2;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --text-primary: #130f26;
+  --text-secondary: #707070;
+  --secondary-border-color: #cccccc;
+  --bs-body-color: #130f26;
+}
+
+.bg-theme-color {
+  background-color: var(--primary-theme-color) !important;
+}
+
+.bg-primary {
+  color: var(--bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary) !important;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-light-purple {
+  background-color: $accent-purple;
+}
+
+.bg-purple {
+  background-color: $purple-100;
+}
+
+.bg-light-orange {
+  background-color: $accent-orange !important;
+}
+
+.bg-accent-green-10 {
+  background-color: $accent-green;
+}
+
+.bg-accent-blue {
+  background-color: $blue-200;
+}
+
+.bg-accent-aqua {
+  background-color: $accent-aqua;
+}
+
+.bg-accent-red {
+  background-color: $red-400;
+}
+
+.bg-accent-green-30 {
+  background-color: $green-300;
+}
+
+.border-secondary-color {
+  border-color: --secondary-border-color !important;
+}
+
+.bg-green-50 {
+  background-color: $green-5;
+}
+
+.bg-green-100 {
+  background-color: $green-700;
+}
+
+.bg-green-200 {
+  background-color: $green-200;
+}
+
+.bg-green-300 {
+  background-color: $light-green-300;
+}
+
+.bg-green-800 {
+  background-color: $green-800;
+}
+
+.bg-green-900 {
+  background-color: $green-900;
+}
+
+.bg-slate-300 {
+  background-color: $slate-300;
+}
+
+.bg-gray-light {
+  background-color: $slate-100;
+}
+
+.bg-light-pearl {
+  background-color: $slate-20;
+}
+
+.bg-pearl {
+  background-color: $slate-200;
+}
+
+.bg-gray-dark {
+  background-color: $dark-400 !important;
+}
+
+.bg-gray-darker {
+  background-color: $slate-60;
+}
+
+.bg-slate {
+  background-color: $slate-50;
+}
+
+.bg-orange {
+  background-color: $orange-400;
+}
+
+.bg-orange-100 {
+  background-color: $light-orange;
+}
+
+.bg-dark-orange {
+  background-color: $orange-300;
+}
+
+.bg-light-green {
+  background: rgba(80, 190, 167, 0.15);
+}
+
+.bg-light-green-10 {
+  background: $light-green;
+}
+
+.bg-yellow {
+  background-color: $yellow-200;
+}
+
+.bg-yellow-600 {
+  background-color: $yellow-600;
+}
+
+.bg-yellow-400 {
+  background-color: $yellow-400;
+}
+
+.bg-dark-yellow {
+  background-color: $yellow-300;
+}
+
+.bg-light-yellow {
+  background-color: $yellow-100;
+}
+
+.bg-red {
+  background-color: $dark-red-10;
+}
+
+.bg-dark-red {
+  background-color: $red-600;
+}
+
+.bg-red-light {
+  background-color: $red-700;
+}
+
+.bg-aqua {
+  background-color: $aqua-400;
+}
+
+.bg-light-aqua {
+  background-color: $aqua-200;
+}
+
+.bg-accent-green-light-100 {
+  background-color: $light-green-100 !important;
+}
+
+.bg-accent-green-light {
+  background-color: rgba($green-500, 0.2);
+}
+
+.bg-accent-red-light {
+  background-color: rgba($red-200, 0.2);
+}
+
+.bg-linear-gradient-purple {
+  background: rgba($accent-purple, 0.5);
+}
+
+.bg-linear-gradient-purple-active {
+  background: linear-gradient(
+    261.52deg,
+    $accent-purple 42.47%,
+    rgba(125, 136, 231, 0.65) 159.82%
+  );
+  box-shadow: 5px 5px 10px $accent-purple-60;
+}
+
+.bg-linear-gradient-green {
+  background: rgba($accent-green, 0.5);
+}
+
+.bg-linear-gradient-green-active {
+  background: linear-gradient(
+    257.63deg,
+    $accent-green 41%,
+    rgba(80, 190, 167, 0.59) 138.13%
+  );
+  box-shadow: 5px 5px 10px $accent-green-60;
+}
+
+.bg-linear-gradient-red {
+  background: rgba($accent-red, 0.5);
+}
+
+.bg-linear-gradient-red-active {
+  background: linear-gradient(
+    258.32deg,
+    $accent-red 41.44%,
+    rgba(231, 125, 125, 0.56) 133.62%
+  );
+  box-shadow: 5px 5px 10px $accent-red;
+}
+
+.bg-linear-gradient-aqua {
+  background: rgba($accent-aqua, 0.5);
+}
+
+.bg-linear-gradient-aqua-active {
+  background: linear-gradient(
+    258.32deg,
+    $blue-200 41.44%,
+    rgba(125, 200, 231, 0.56) 133.62%
+  );
+  box-shadow: 5px 5px 10px $accent-aqua-60;
+}
+
+.bg-linear-gradient-orange {
+  background: rgba($accent-orange, 0.5);
+}
+
+.bg-linear-gradient-orange-active {
+  background: linear-gradient(
+    261.52deg,
+    $accent-orange 42.47%,
+    rgba(255, 154, 138, 0.62) 159.82%
+  );
+  box-shadow: 5px 5px 10px $accent-orange-60;
+}
+
+.bg-accent-orange {
+  background: $accent-orange;
+}
+
+.bg-accent-green {
+  background-color: $accent-green;
+}
+
+.bg-blue {
+  @extend .bg-theme-color;
+}
+
+.bg-light-blue {
+  background-color: $blue-100;
+}
+
+.bg-dark-blue {
+  background-color: $blue-500;
+}
+
+.bg-blue-800 {
+  background-color: $blue-800;
+}
+
+.bg-hover-green {
+  &:hover {
+    background-color: $accent-green;
+
+    .icon-hover-white {
+      color: $white;
+    }
+  }
+}
+
+.bg-hover-red {
+  &:hover {
+    background-color: $red-700;
+  }
+}
+
+.bg-accent-green-light-10 {
+  background-color: $accent-green-10;
+}
+
+.bg-accent-red-light-10 {
+  background-color: $accent-red-10;
+}
+
+.bg-accent-yellow-light-10 {
+  background-color: $accent-yellow-10;
+}
+
+.bg-accent-grey-light-10 {
+  background-color: $accent-grey-10;
+}
+
+.bg-accent-green-100 {
+  background-color: $green-100;
+}
+
+.bg-accent-blue-light {
+  background-color: $blue-10;
+}
+
+.bg-violet {
+  background-color: $violet-100;
+}
+
+.bg-dark-green {
+  background-color: $dark-green;
+}
+
+.bg-accent-blue-10 {
+  background-color: $blue-10;
+}
+
+.bg-accent-red-light-40 {
+  background-color: $red-40;
+}
+
+.bg-coal {
+  background-color: $dark-800;
+}
+
+.bg-maroon {
+  background-color: $maroon-10;
+}
+
+.bg-orange-200 {
+  background-color: $orange-200;
+}
+
+.bg-red-300 {
+  background-color: $red-300;
+}
+
+.bg-aqua-100 {
+  background-color: $aqua-100;
+}
+
+.bg-navy {
+  background-color: $navy-50;
+}
+
+.bg-blue-200 {
+  background-color: $blue-200;
+}
+
+.card-bg-accent-blue-light {
+  background-color: $blue-250;
+}
+
+.right-gradient-blue {
+  background: linear-gradient(
+    74.81deg,
+    $dark-blue 3.08%,
+    rgba(8, 142, 200, 0.6) 97.71%
+  );
+}
+
+.right-gradient-green {
+  background: linear-gradient(
+    74.64deg,
+    $green-200 2.12%,
+    rgba(14, 169, 113, 0.6) 98.51%
+  );
+}
+
+.right-gradient-red {
+  background: linear-gradient(
+    74.16deg,
+    $red-600 1.92%,
+    rgba(228, 77, 77, 0.6) 99.21%
+  );
+}
+
+.calendar-legend {
+  @extend .mr-12;
+
+  p {
+    @extend .ml-12;
+  }
+
+  .bg-accent-red {
+    background-color: $accent-red-20 !important;
+  }
+
+  .bg-accent-purple {
+    background-color: $accent-purple-10 !important;
+  }
+
+  .bg-accent-blue {
+    background-color: $accent-blue-10 !important;
+  }
+
+  .bg-accent-green {
+    background-color: $accent-green-10 !important;
+  }
+
+  .bg-accent-yellow {
+    background-color: $accent-yellow-20 !important;
+  }
+}

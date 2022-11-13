@@ -1,0 +1,192 @@
+ul {
+  &.time-line {
+    @extend .p-0;
+    list-style: none;
+
+    &.has-left-content {
+      margin-left: 100px !important;
+
+      &>li {
+        .left-content {
+          @extend .position-absolute;
+          top: 2px;
+        }
+      }
+
+      &.left-content-md {
+        margin-left: 115px !important;
+
+        &>li {
+          .left-content {
+            width: 110px;
+            left: -40px;
+          }
+        }
+      }
+
+      &.left-content-lg {
+        margin-left: 150px !important;
+
+        &>li {
+          .left-content {
+            width: 140px;
+            left: -73px;
+          }
+        }
+      }
+    }
+
+    &>li {
+      padding-left: 30px;
+      position: relative;
+      text-align: left;
+
+      &:not(:first-child) {
+        @extend .mt-12;
+      }
+
+      span {
+        @extend .text-secondary;
+      }
+
+      &.active {
+        span {
+          @extend .text-white;
+        }
+      }
+
+      &.check-list-item {
+        &>.list-icon:first-child {
+          @extend .bg-white;
+          position: absolute;
+          left: -7px;
+          z-index: 1;
+          margin-top: 4px;
+          margin-left: 4px;
+          height: 16px;
+          width: 16px;
+        }
+      }
+
+      &.active:before {
+        background-color: $green-500; 
+        cursor: pointer;
+      }
+
+      &:before {
+        content: '';
+        @extend .position-absolute;
+        height: 12px;
+        width: 12px;
+        top: 2px;
+        left: 0;
+        border: 1px solid $blue-40;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      &.dot-orange{
+        &:before {
+         @extend .border-0;
+          background-color: $orange-400 !important;
+          
+        }
+      }
+
+      &.dot-gray{
+        &:before {
+         @extend .border-0;
+          background-color: $slate-60 !important;
+          
+        }
+      }
+
+      // finance mypay timeline
+      &.dot-36 {
+        padding-left: 65px !important;
+
+        &:before {
+          height: 36px;
+          width: 36px;
+        }
+
+        &:not(:last-child):after {
+          top: 41px;
+          left: 17px;
+        }
+      }
+
+      &:not(:last-child):after {
+        content: '';
+        @extend .position-absolute;
+        @extend .h-100;
+        top: 14px;
+        left: 5px;
+        border-left: 1px solid $slate-60;
+        border-right: none !important;
+      }
+
+      &:not(:last-child) {
+        @extend .pb-20;
+      }
+
+      .left-content {
+        float: left;
+        text-align: right;
+        margin-left: -100px;
+      }
+    }
+
+    &.list-style-numbered {
+      margin-bottom: 10px;
+
+      li {
+        &:not(:last-child) {
+          @extend .pb-8;
+        }
+
+        &:before {
+          content: counter(li);
+          counter-increment: li;
+          height: 16px;
+          width: 16px;
+          line-height: 13px;
+          left: -3px;
+          top: 4px;
+          font-size: 10px;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
+
+.time-line-dashed {
+  li:not(:last-child) {
+    .event-bottom-dashed {
+      border-bottom: 1px solid $blue-40;
+      border-bottom-style: dashed;
+    }
+
+    &::after {
+      border-style: dashed !important;
+    }
+  }
+
+  li:last-child {
+    &::after {
+      content: '';
+      @extend .position-absolute;
+      height: 100%;
+      top: 14px;
+      left: 5px;
+      border-left: 1px dashed $slate-60;
+    }
+  }
+
+  li:last-child {
+    &::after {
+      border-left: 1px dashed $slate-60 !important;
+    }
+  }
+}

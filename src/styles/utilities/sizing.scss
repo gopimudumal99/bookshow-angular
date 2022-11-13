@@ -1,0 +1,16 @@
+$sizes: (
+    ) !default;
+$sizes: map-merge((5:5px, 8:8px, 10:10px, 12:12px, 18:18px, 20px:20px, 24:24px, 20:20%, 30px:30px, 30:30%, 35:35%, 35px:35px, 33:33%, 40pr:40%, 40:40px, 48:48px, 50:50%, 50px:50px, 60pr:60%, 60:60px, 70:70%, 80:80px, 90:90px, 100px: 100px, 110:110px, 120:120px, 125:125px, 130:130px, 140: 140px, 150: 150px, 160: 160px, 170:170px, 180:180px, 200: 200px, 210:210px, 220:220px, 240: 240px, 250: 250px, 260: 260px, 270: 270px, 280: 280px, 300:300px, 330:330px, 350:350px, 360:360px, 370:370px, 390:390px, 400: 400px, 450: 450px, 500:500px, 550: 550px, 600: 600px, 700: 700px, 750:750px, auto: auto), $sizes
+);
+
+@each $prop,
+$abbrev in (width: w, height: h, min-width: min-w, max-width: max-w, min-height: min-h, max-height: max-h,
+    border-radius: br, border-top-left-radius: brtl, border-top-right-radius: brtr, border-bottom-right-radius: brbr, border-bottom-left-radius: brbl) {
+
+    @each $size,
+    $length in $sizes {
+        .#{$abbrev}-#{$size} {
+            #{$prop}: $length !important;
+        }
+    }
+}

@@ -1,0 +1,128 @@
+$default-margin-spacer: 10px;
+$default-padding-spacer: 4px;
+
+$margin-spacers: ();
+$margin-spacers: map-merge((4: ($default-padding-spacer * 1), 8: ($default-padding-spacer * 2), 10: ($default-margin-spacer * 1), 12: ($default-padding-spacer * 3), 16: ($default-padding-spacer * 4), 20: ($default-margin-spacer * 2), 24: ($default-padding-spacer * 5), 30: ($default-margin-spacer * 3), 40: ($default-margin-spacer * 4), 50: ($default-margin-spacer * 5), 60: ($default-margin-spacer * 6), 70: ($default-margin-spacer * 7), 80: ($default-margin-spacer * 8), 90: ($default-margin-spacer * 9), 100: ($default-margin-spacer * 10), 0: 0), $margin-spacers);
+
+$padding-spacers: ();
+$padding-spacers: map-merge((4: ($default-padding-spacer * 1), 8: ($default-padding-spacer * 2), 10: ($default-margin-spacer * 1), 12: ($default-padding-spacer * 3), 16: ($default-padding-spacer * 4), 20: ($default-margin-spacer * 2), 24: ($default-padding-spacer * 5), 30: ($default-margin-spacer * 3), 40: ($default-margin-spacer * 4), 50: ($default-margin-spacer * 5), 60: ($default-margin-spacer * 6), 70: ($default-margin-spacer * 7), 80: ($default-margin-spacer * 8), 90: ($default-margin-spacer * 9), 100: ($default-margin-spacer * 10), 0: 0), $padding-spacers);
+
+@each $prop,
+$abbrev in (margin: m) {
+
+    @each $size,
+    $length in $margin-spacers {
+
+        .#{$abbrev}-#{$size} {
+            #{$prop}: $length !important;
+        }
+
+        .#{$abbrev}t-#{$size},
+        .#{$abbrev}y-#{$size} {
+            #{$prop}-top: $length !important;
+        }
+
+        .#{$abbrev}r-#{$size},
+        .#{$abbrev}x-#{$size} {
+            #{$prop}-right: $length !important;
+        }
+
+        .#{$abbrev}b-#{$size},
+        .#{$abbrev}y-#{$size} {
+            #{$prop}-bottom: $length !important;
+        }
+
+        .#{$abbrev}l-#{$size},
+        .#{$abbrev}x-#{$size} {
+            #{$prop}-left: $length !important;
+        }
+    }
+}
+
+@each $prop,
+$abbrev in (padding: p) {
+
+    @each $size,
+    $length in $padding-spacers {
+
+        .#{$abbrev}-#{$size} {
+            #{$prop}: $length !important;
+        }
+
+        .#{$abbrev}t-#{$size},
+        .#{$abbrev}y-#{$size} {
+            #{$prop}-top: $length !important;
+        }
+
+        .#{$abbrev}r-#{$size},
+        .#{$abbrev}x-#{$size} {
+            #{$prop}-right: $length !important;
+        }
+
+        .#{$abbrev}b-#{$size},
+        .#{$abbrev}y-#{$size} {
+            #{$prop}-bottom: $length !important;
+        }
+
+        .#{$abbrev}l-#{$size},
+        .#{$abbrev}x-#{$size} {
+            #{$prop}-left: $length !important;
+        }
+    }
+}
+
+.m-auto {
+    margin: auto !important;
+}
+
+.mt-auto,
+.my-auto {
+    margin-top: auto !important;
+}
+
+.mr-auto,
+.mx-auto {
+    margin-right: auto !important;
+}
+
+.mb-auto,
+.my-auto {
+    margin-bottom: auto !important;
+}
+
+.ml-auto,
+.mx-auto {
+    margin-left: auto !important;
+}
+
+.clear-margin {
+    @extend .m-0;
+}
+
+.clear-margin-t,
+.clear-margin-y {
+    @extend .mt-0;
+}
+
+.clear-margin-r,
+.clear-margin-x {
+    @extend .mr-0;
+}
+
+.clear-margin-b,
+.clear-margin-y {
+    @extend .mb-0;
+}
+
+.clear-margin-l,
+.clear-margin-x {
+    @extend .ml-0;
+}
+
+.page-container {
+    @extend .p-16;
+
+    &.clear-padding {
+        @extend .clear-padding;
+    }
+}

@@ -1,0 +1,42 @@
+.page-header {
+    background-color: $white;
+    padding: 6px 8px;
+    position: sticky;
+    top: 0;
+
+    .header-input {
+        position: relative;
+        max-width: 200px;
+        width: 200px;
+
+        .input-field {
+            border: none;
+            box-sizing: border-box;
+            color: $slate-600;
+            outline: none;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: $slate-200;
+            text-indent: 12px;
+
+            &::placeholder {
+                font-size: 14px;
+            }
+        }
+
+        .ic-search {
+            position: absolute;
+            right: 13px;
+            top: 11px;
+            z-index: 2;
+        }
+    }
+
+    .user-profile {
+        img {
+            @extend .cursor-pointer;
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

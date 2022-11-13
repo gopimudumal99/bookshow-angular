@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+$base-font-size: 11;
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+  margin: 0 !important;
+}
+
+p {
+  @extend .text-normal;
+  margin-bottom: 0;
+}
+
+.text-xl {
+  font-size: $base-font-size + 49px;
+  line-height: $base-font-size + 53px;
+  font-weight: 700;
+}
+
+//headers & titles
+h1,
+.header-1 {
+  font-size: $base-font-size + 13px;
+  line-height: $base-font-size + 17px;
+  font-weight: 400;
+}
+
+h2,
+.header-2 {
+  font-size: $base-font-size + 9px;
+  line-height: $base-font-size + 13px;
+  font-weight: 400;
+}
+
+h3,
+.header-3 {
+  font-size: $base-font-size + 5px;
+  line-height: $base-font-size + 9px;
+  font-weight: 400;
+}
+
+h4,
+.header-4,
+.text-xl {
+  font-size: $base-font-size + 3px !important;
+  line-height: $base-font-size + 7px;
+  font-weight: 400;
+}
+
+h5,
+.text-large,
+.header-5 {
+  font-size: $base-font-size + 1px;
+  line-height: $base-font-size + 5px;
+}
+
+.text-normal,
+.text-body,
+h6,
+.header-6 {
+  font-size: $base-font-size + 0px;
+  line-height: $base-font-size + 4px;
+}
+
+.text-sm {
+  font-size: $base-font-size - 1px;
+  line-height: $base-font-size + 2px;
+}
+
+.text-xs {
+  font-size: $base-font-size - 2px;
+  line-height: $base-font-size + 1px;
+}
+
+.text-xxs {
+  font-size: $base-font-size - 3px;
+  line-height: $base-font-size + 1px;
+}
+
+.text-xxxs {
+  font-size: $base-font-size - 4px;
+  line-height: $base-font-size - 2px;
+}
+
+.text-xs-xs {
+  font-size: $base-font-size - 5px;
+}
+
+//font weights
+//fw-light
+.fw-300 {
+  font-weight: 300;
+}
+
+//fw-normal
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-semi-bold {
+  font-weight: 500 !important;
+}
+
+//fw-semibold
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+//fw-bold
+.fw-700 {
+  font-weight: 700;
+}
+
+//text plain colors
+.text-white {
+  color: $white;
+}
+
+.text-dark {
+  color: $dark-200;
+}
+
+.text-coal {
+  color: $dark-800;
+}
+
+.text-light {
+  color: $white;
+}
+
+.text-mud {
+  color: $dark-700;
+}
+
+.text-primary-color {
+  color: var(--text-primary);
+}
+
+.text-secondary-color {
+  color: var(--text-secondary);
+}
+
+//text colors
+.text-blue {
+  color: var(--primary-theme-color);
+}
+
+.text-orange {
+  color: $orange-200;
+}
+
+.text-light-orange {
+  color: $light-orange;
+}
+
+.text-dark-orange {
+  color: $orange-400;
+}
+
+.text-yellow {
+  color: $yellow-300;
+}
+
+.text-red {
+  color: $dark-red;
+}
+
+.text-light-red {
+  color: $red-100;
+}
+
+.text-green {
+  color: $light-green;
+}
+
+.text-light-green {
+  color: $light-green-300;
+}
+
+.text-dark-green {
+  color: $green-20;
+}
+
+.text-lime {
+  color: $green-10;
+}
+
+.text-purple {
+  color: $accent-purple;
+}
+
+.text-gray {
+  color: $slate-600 !important;
+}
+
+.text-light-gray {
+  color: $slate-60;
+}
+
+.text-light-aqua {
+  color: $accent-blue-light;
+}
+
+.text-accent-blue {
+  color: $accent-blue-light !important;
+}
+
+.text-error-red {
+  color: $dark-red-10;
+}
+
+.text-accent-red {
+  color: $red-900;
+}
+
+.text-yellow-400 {
+  color: $yellow-400;
+}
+
+.text-aqua-100 {
+  color: $aqua-100;
+}
+
+.text-navy-50 {
+  color: $navy-50;
+}
+
+.text-pink-600 {
+  color: $pink-600;
+}
+
+.text-blue-light {
+  color: $blue-20;
+}
+
+.text-success {
+  color: $accent-green !important;
+}
+
+.text-slate {
+  color: $slate-600;
+}
+
+.text-hover {
+  &:hover {
+    @extend .fw-semi-bold;
+  }
+}
+
+.text-dark-hover {
+  &:hover {
+    color: $black !important;
+  }
+}
+
+.text-green-250 {
+  color: $accent-green;
+}

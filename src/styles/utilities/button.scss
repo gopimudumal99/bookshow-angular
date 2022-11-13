@@ -1,0 +1,593 @@
+.btn {
+  text-align: center;
+  border-radius: 7px;
+  @extend .px-16;
+  vertical-align: middle;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+  @extend .text-large;
+
+  &.btn-secondary {
+    background-color: $slate-200;
+    color: $dark-100;
+  }
+
+  &.btn-success {
+    background-color: $accent-green;
+    color: $white;
+  }
+
+  &.btn-gray {
+    background-color: $dark-400;
+    color: $slate-60;
+  }
+
+  &.btn-xs {
+    height: 35px;
+    padding: unset;
+  }
+
+  &.btn-sm {
+    height: 40px;
+  }
+
+  &.btn-md {
+    height: 32px;
+    padding: unset;
+  }
+
+  &.btn-x-sm {
+    height: 28px;
+    padding: unset;
+  }
+
+  &.btn-xl {
+    height: 50px;
+    padding: unset;
+  }
+
+  &.btn-xxl {
+    height: 72px;
+    padding: unset;
+  }
+
+  &.btn-lg {
+    height: 48px;
+    padding: unset;
+  }
+
+  &.btn-xxs {
+    height: 35px;
+    padding: unset;
+  }
+
+  &.btn-critical,
+  &.btn-high,
+  &.btn-medium,
+  &.btn-low {
+    height: 22px;
+    padding: 12px;
+    border-radius: 50px !important;
+  }
+
+  &.btn-critical {
+    color: $dark-red;
+    border: 1px solid $dark-red !important;
+  }
+
+  &.btn-high {
+    color: $light-orange;
+    border: 1px solid $light-orange !important;
+  }
+
+  &.btn-medium {
+    color: $yellow-300;
+    border: 1px solid $yellow-300 !important;
+  }
+
+  &.btn-low {
+    color: $light-green;
+    border: 1px solid $light-green !important;
+  }
+
+  &.btn-orange {
+    background-color: $orange-100;
+  }
+}
+
+.btn-primary {
+  @extend .bg-theme-color;
+  border-radius: 10px !important;
+  @extend .text-light;
+
+  &:hover,
+  &:focus {
+    @extend .bg-theme-color;
+  }
+}
+
+.btn-success {
+  background-color: $accent-green;
+  @extend .text-light;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-green;
+  }
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: 1px solid $border-light-grey !important;
+  color: $slate-60 !important;
+
+  &:hover,
+  &:focus {
+    color: $slate-60 !important;
+  }
+}
+
+.btn-green {
+  background-color: transparent;
+  border: 1px solid $accent-green !important;
+  color: $accent-green !important;
+
+  &:hover,
+  &:focus {
+    color: $accent-green !important;
+  }
+}
+
+.btn-opacity-10 {
+  background-color: rgb(91, 103, 202, 0.1);
+  border-radius: 10px !important;
+  color: rgb(109, 109, 109, 1);
+
+  &:hover,
+  &:focus {
+    background-color: rgb(91, 103, 202, 0.1);
+  }
+}
+
+.dropdown {
+  .dropdown-custom-sm {
+    background-color: $white !important;
+    border: none;
+    color: $slate-500 !important;
+    display: flex;
+    font-weight: 300;
+
+    align-items: center;
+
+    &::after {
+      font-family: "leadRat" !important;
+      content: "\e919" !important;
+      border-top: none !important;
+      border-radius: 6px;
+      margin-left: 40px;
+      font-size: 10px;
+    }
+  }
+
+  .dropdown-custom-x-sm {
+    background-color: $white !important;
+    border: none;
+    color: $black !important;
+    display: flex;
+    @extend .justify-content-between;
+    padding: 3px;
+
+    &::after {
+      font-family: "leadRat" !important;
+      content: "\e919" !important;
+      border-top: none !important;
+      border-radius: 6px;
+      color: $black !important;
+      margin-left: 10px;
+      @extend .ic-xxs;
+    }
+
+    &.dropdown-sm {
+      padding: 5px 0px;
+
+      &::after {
+        margin: 0px 10px;
+        color: $slate-500 !important;
+        @extend .ic-xxxs;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    min-width: 100px !important;
+
+    .dropdown-item {
+      &:hover {
+        background-color: $slate-400 !important;
+        color: $black !important;
+      }
+
+      &:focus {
+        background-color: none !important;
+      }
+    }
+  }
+}
+
+.btn-white {
+  @extend .bg-white;
+  border-radius: 10px !important;
+  @extend .text-secondary-color;
+
+  &:hover,
+  &:focus {
+    @extend .bg-white;
+  }
+}
+
+.btn-orange-light {
+  background-color: $orange-400;
+  border-radius: 10px !important;
+  @extend .text-light;
+
+  &:hover,
+  &:focus {
+    background-color: $orange-400;
+  }
+}
+
+.dropdown {
+  .modal-dropdown-menu {
+    min-width: 100% !important;
+    max-height: 300px;
+    overflow-y: auto;
+    @extend .py-10;
+    @extend .px-4;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(73, 73, 73, 0.08);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $accent-green;
+    }
+
+    .dropdown-item {
+      &.modal-dropdown-item {
+        border-radius: 5px;
+        @extend .py-12;
+      }
+    }
+  }
+}
+
+.btn-orange-dark {
+  background: $orange-400;
+}
+
+.btn-blue {
+  background: $blue-20;
+}
+
+.btn-check-critical:checked ~ .btn-critical {
+  background-color: $dark-red;
+  color: $white;
+}
+
+.btn-check-high:checked ~ .btn-high {
+  background-color: $light-orange;
+  color: $white;
+}
+
+.btn-check-medium:checked ~ .btn-medium {
+  background-color: $yellow-300;
+  color: $white;
+}
+
+.btn-check-low:checked ~ .btn-low {
+  background-color: $light-green;
+  color: $white;
+}
+
+.btn-green-light,
+.btn-green-light:hover,
+.btn-green-light:focus {
+  background-color: $accent-green;
+  color: $white;
+}
+
+.btn-dark-red {
+  background-color: $red-800;
+}
+
+.btn-dark-green {
+  background-color: $green-600;
+}
+
+.btn-white {
+  &.btn-border-green {
+    border: 1px solid $accent-green !important;
+  }
+}
+
+.form-check-input {
+  @extend .mt-0;
+}
+
+.button-fixed-bottom {
+  position: fixed;
+  bottom: 30px;
+  right: 215px;
+}
+
+.btn-opacity-10 {
+  background-color: rgb(91, 103, 202, 0.1);
+  border-radius: 10px !important;
+  color: rgb(109, 109, 109, 1);
+
+  &:hover,
+  &:focus {
+    background-color: rgb(91, 103, 202, 0.1);
+  }
+}
+
+.card,
+.btn {
+  &.bg-accent-green-light {
+    background-color: $light-green-100 !important;
+  }
+
+  &.bg-accent-red-light {
+    background-color: $light-red-100 !important;
+  }
+}
+
+.btn-border-green {
+  border-color: $accent-green !important;
+}
+
+.btn-border-red {
+  border-color: $light-red-50 !important;
+}
+
+.form-check-inline {
+  @extend .mr-20;
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-center;
+  @extend .cursor-pointer;
+
+  input {
+    @extend .mr-4;
+
+    &.form-check-input {
+      @extend .ml-0;
+      @extend .position-relative;
+      @extend .cursor-pointer;
+
+      &:checked {
+        background-color: $white;
+        border: 1px solid $green-50;
+        background-image: none !important;
+
+        &:after {
+          position: absolute;
+          display: block;
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: $accent-green;
+          border: 1px solid $white;
+          text-align: center;
+          right: 1px;
+          bottom: 1px;
+        }
+      }
+
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+
+    &.radio-check-input {
+      border: 2px solid $white;
+      box-shadow: 0 0 0 1px $slate-60;
+      appearance: none;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      background-color: $white;
+      transition: all ease-in 0.2s;
+      @extend .cursor-pointer;
+
+      &:checked {
+        background-color: $accent-green;
+        box-shadow: 0 0 0 1px $green-50;
+      }
+    }
+  }
+
+  label {
+    @extend .cursor-pointer;
+  }
+}
+
+.form-check {
+  @extend .mb-0;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: transparent;
+  border: 1px solid $slate-60;
+  border-radius: 2px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: $border-light-grey;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: $accent-green;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  width: 4px;
+  height: 9px;
+  top: 0px;
+  left: 3px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox-container .checkmark.select-all:after {
+  width: 4px;
+  height: 8px;
+  top: 1px;
+  @extend .left-3;
+  border: solid $white;
+  @extend .rotate-90;
+  @extend .border-right-4;
+}
+
+.btn-border-gray {
+  border: 1px solid $slate-60 !important;
+}
+
+.btn-text-white {
+  color: $white;
+
+  .text-secondary {
+    color: unset !important;
+  }
+
+  .btn {
+    color: unset !important;
+  }
+}
+
+//Google Button for Gmail Integration
+.g-sign-in-button {
+  margin: 10px;
+  display: inline-block;
+  width: 240px;
+  height: 50px;
+  background-color: $blue-70;
+  color: $white;
+  border-radius: 1px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: background-color 0.218s, border-color 0.218s, box-shadow 0.218s;
+}
+
+.g-sign-in-button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
+  box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
+}
+
+.g-sign-in-button:active {
+  background-color: $blue-60;
+  transition: background-color 0.2s;
+}
+
+.g-sign-in-button .content-wrapper {
+  height: 100%;
+  width: 100%;
+  border: 1px solid transparent;
+}
+
+.g-sign-in-button img {
+  width: 18px;
+  height: 18px;
+}
+
+.g-sign-in-button .logo-wrapper {
+  padding: 15px;
+  background: $white;
+  width: 48px;
+  height: 100%;
+  border-radius: 1px;
+  display: inline-block;
+}
+
+.g-sign-in-button .text-container {
+  font-family: Roboto, arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.21px;
+  font-size: 16px;
+  line-height: 48px;
+  vertical-align: top;
+  border: none;
+  display: inline-block;
+  text-align: center;
+  width: 180px;
+}
+
+.btn-cancel {
+  @extend .btn, .btn-gray, .btn-md, .w-100px, .border-radius-5, .fw-semi-bold;
+
+  &:hover,
+  &:focus {
+    background-color: $dark-400 !important;
+    color: $slate-60 !important;
+  }
+}
+
+.btn-save {
+  @extend .btn,
+    .bg-coal,
+    .text-light,
+    .btn-md,
+    .w-100px,
+    .border-radius-5,
+    .fw-semi-bold;
+
+  &:hover,
+  &:focus {
+    background-color: $dark-800 !important;
+  }
+}

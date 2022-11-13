@@ -1,0 +1,153 @@
+.pagination {
+  justify-content: flex-end;
+
+  .prev {
+    background-color: $slate-80 !important;
+
+    a {
+      color: $slate-600 !important;
+    }
+
+    &.disabled {
+      cursor: no-drop;
+      background-color: $slate-80 !important;
+
+      a {
+        color: rgba(119, 119, 119, 0.2) !important;
+        cursor: no-drop;
+      }
+    }
+
+    img {
+      width: 15px;
+    }
+  }
+
+  .single-prev {
+    background-color: $slate-80 !important;
+
+    &.disabled {
+      cursor: no-drop;
+
+      a {
+        color: rgba(119, 119, 119, 0.2) !important;
+        cursor: no-drop;
+      }
+    }
+  }
+
+  .single-next {
+    background-color: $slate-80 !important;
+
+    a {
+      color: $slate-600 !important;
+    }
+
+    &.disabled {
+      cursor: no-drop;
+
+      a {
+        color: rgba(119, 119, 119, 0.2) !important;
+        cursor: no-drop;
+      }
+    }
+  }
+
+  .next {
+    background-color: $slate-80 !important;
+
+    a {
+      color: $slate-600 !important;
+    }
+
+    &.disabled {
+      background-color: $slate-80 !important;
+      cursor: no-drop;
+
+      a {
+        color: rgba(119, 119, 119, 0.2) !important;
+        cursor: no-drop;
+      }
+    }
+
+    img {
+      width: 15px;
+      transform: rotate(180deg);
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+
+    li {
+      margin: 2px 0px;
+      width: 30px;
+      height: 30px;
+      line-height: 1.5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $dark-400;
+      background-color: $white;
+      cursor: pointer;
+
+      a {
+        color: $slate-600 !important;
+        font-size: 12px;
+
+        .fd-peg {
+          display: block;
+        }
+
+        .nrm-peg {
+          display: block;
+        }
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+    }
+
+    li.active {
+      background: $blue-500;
+      text-align: center;
+      border-left: none;
+      border-right: none;
+
+      a {
+        color: $white !important;
+      }
+    }
+  }
+}
+
+.pagination li:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination li:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.pagination {
+  border-radius: 10px !important;
+  @extend .text-large;
+
+  .pagination-prev {
+    .page-link {
+      background-color: $slate-300 !important;
+    }
+  }
+
+  .pagination-next {
+    .page-link {
+      background-color: $slate-300 !important;
+    }
+  }
+}

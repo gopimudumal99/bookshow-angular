@@ -1,0 +1,190 @@
+$modal-dialog-margin: 0.5rem !default;
+
+//to remove scroll bar of modal
+.modal-open {
+  overflow: hidden;
+}
+
+//to override modals default padding
+.modal-header {
+  padding: 0 !important;
+}
+
+.modal-content {
+  border-radius: 10px;
+  border: none;
+}
+
+.modal-radius {
+  .modal-content {
+    border: none !important;
+    border-radius: unset !important;
+  }
+}
+
+//made modal stylings constant for leadrat
+.modal-body {
+  &.clear-padding {
+    padding: 0;
+  }
+
+  &.modal-primary {
+    @extend .d-flex;
+
+    .modal-leftbar {
+      @extend .border-left-radius-10;
+      color: $white;
+      padding: 40px 20px;
+      @extend .bg-theme-color;
+      @extend .d-flex;
+      @extend .flex-column;
+      @extend .justify-content-between;
+      @extend .align-items-center;
+    }
+
+    .modal-rightbar {
+      background-color: $slate-20;
+      @extend .border-right-radius-10;
+      padding: 20px;
+      @extend .flex-grow-1;
+
+      .modal-header {
+        &.modal-header-primary {
+          @extend .border-bottom-0;
+          @extend .d-flex;
+          @extend .justify-content-between;
+          @extend .align-items-center;
+        }
+
+        .modal-title {
+          font-weight: 500 !important;
+        }
+      }
+    }
+  }
+}
+
+.modal-body {
+  &.modal-primary {
+    .modal-leftbar {
+      &.align-items-start {
+        align-items: start !important;
+      }
+    }
+  }
+}
+
+.right-modal {
+  height: 100%;
+  @extend .m-0;
+  float: right;
+  @extend .overflow-hidden;
+  @extend .d-flex;
+  @extend .flex-column;
+
+  .modal-content {
+    border-radius: 0px !important;
+    min-height: 100%;
+  }
+
+  &.right-modal-400 {
+    width: 400px;
+  }
+
+  .modal-footer {
+    border-top: none;
+    position: sticky;
+    bottom: 0;
+  }
+}
+
+.modal-radius-20 {
+  .modal-content {
+    border-radius: 20px;
+  }
+}
+
+//to make modal at exact center of screen
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+}
+
+.modal-100 {
+  width: 100px;
+  min-width: 100px;
+}
+
+.modal-150 {
+  width: 150px;
+  min-width: 150px;
+}
+.modal-170 {
+  width: 170px;
+  min-width: 170px;
+}
+.modal-300 {
+  width: 300px;
+  min-width: 300px;
+}
+
+.modal-350 {
+  width: 350px;
+  min-width: 350px;
+}
+
+.modal-400 {
+  width: 400px;
+  min-width: 400px;
+}
+
+.modal-500 {
+  width: 500px;
+  min-width: 500px;
+}
+
+.modal-600 {
+  width: 600px;
+  min-width: 600px;
+}
+
+.modal-700 {
+  width: 700px;
+  min-width: 700px;
+}
+
+.modal-750 {
+  width: 750px;
+  min-width: 750px;
+}
+
+.modal-800 {
+  width: 800px;
+  min-width: 800px;
+}
+
+.modal-900 {
+  width: 900px;
+  min-width: 900px;
+}
+
+.modal-1000 {
+  width: 1000px;
+  min-width: 1000px;
+}
+
+.modal-1200 {
+  width: 1200px;
+  min-width: 1200px;
+}
+
+.modal-1500 {
+  width: 1500px;
+  min-width: 1500px;
+}
+
+.full-modal {
+  width: calc(100% - 100px) !important;
+  height: calc(100% - 100px) !important;
+  min-width: calc(100% - 100px) !important;
+}

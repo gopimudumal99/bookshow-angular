@@ -1,0 +1,70 @@
+.dot {
+    height: 16px;
+    width: 16px;
+    min-width: 16px;
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+    @extend .text-light;
+    @extend .rounded-circle;
+
+    &.dot-xxs {
+        height: 4px;
+        width: 4px;
+        min-width: 4px;
+    }
+
+    &.dot-xs {
+        height: 8px;
+        width: 8px;
+        min-width: 8px;
+    }
+
+    &.dot-sm {
+        height: 12px;
+        width: 12px;
+        min-width: 12px;
+    }
+
+    &.dot-md {
+        height: 20px;
+        width: 20px;
+        min-width: 20px;
+    }
+
+    &.dot-lg {
+        height: 24px;
+        width: 24px;
+        min-width: 24px;
+    }
+
+    &.dot-xl {
+        height: 28px;
+        width: 28px;
+        min-width: 28px;
+    }
+
+    &.dot-xxl {
+        height: 32px;
+        width: 32px;
+        min-width: 32px;
+    }
+
+    &.dot-lg-xxl {
+        height: 40px;
+        width: 40px;
+        min-width: 40px;
+    }
+
+    &.dot-x-xxl {
+        height: 48px;
+        width: 48px;
+        min-width: 48px;
+    }
+
+    &.dot-xxxl {
+        height: 64px;
+        width: 64px;
+        min-width: 64px;
+    }
+}

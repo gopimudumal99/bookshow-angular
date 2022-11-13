@@ -1,0 +1,33 @@
+<div class="container">
+  <form>
+    <div class="form-group row my-2">
+      <label for="seatType" class="col-sm-2 col-form-label"
+        >Choose Seat Type :</label
+      >
+      <div class="col-sm-3">
+        <select #seatType class="form-control" (change)="handleSeatsType(seatType.value)">
+          <option selected>Choose...</option>
+          <option value="premium">Premium</option>
+          <option value="standard">Standard</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row my-2">
+      <label for="noOfSeats" class="col-sm-2 col-form-label"
+        >No of seats :</label
+      >
+      <div class="col-sm-3">
+        <input
+          #inputSeats
+          type="number"
+          class="form-control"
+          name="inputSeats"
+          max="10"
+          min="1"
+          (change)="handleSeatsInput(inputSeats.value)"
+          (keyup)="handleSeatsInput(inputSeats.value)"
+        />
+      </div>
+    </div>
+  </form>
+</div>

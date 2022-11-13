@@ -1,0 +1,35 @@
+<app-seats-form
+  (seatTypeEvent)="seatTypeFun($event)"
+  (seatInputEvent)="seatInputFun($event)"
+></app-seats-form>
+
+<div class="container d-flex flex-column align-items-center gap-4 my-2">
+  <h3>Premium Seats</h3>
+  <div
+    class="d-flex justify-content-center flex-wrap align-items-center w-50 gap-3"
+  >
+    <div *ngFor="let seat of premiumSeats">
+      <app-seats-lists
+        [seat]="seat"
+        (activeSeat)="handleActive($event)"
+        [seatType]="seatSelectType"
+      ></app-seats-lists>
+    </div>
+  </div>
+
+  <h3 class="my-1">Standard Seats</h3>
+  <div
+    class="d-flex w-50 flex-wrap gap-3 align-items-center justify-content-center"
+  >
+    <div *ngFor="let seat of standardSeats">
+      <app-seats-lists
+        [seat]="seat"
+        (activeSeat)="handleActive($event)"
+        [seatType]="seatSelectType"
+      ></app-seats-lists>
+    </div>
+  </div>
+</div>
+<div class="w-100 d-flex justify-content-center align-items-center my-4">
+  <Button class="btn btn-danger btn-lg" (click)="checkout()">Checkout</Button>
+</div>

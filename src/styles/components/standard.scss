@@ -1,0 +1,286 @@
+.flex-center {
+  @extend .align-center, .justify-content-center;
+}
+
+.flex-around {
+  @extend .align-center, .justify-content-around;
+}
+
+.flex-between {
+  @extend .align-center, .justify-content-between;
+}
+
+.flex-end {
+  @extend .align-center, .justify-content-end;
+}
+
+.flex-center-col {
+  @extend .flex-center, .flex-column;
+}
+
+.align-center {
+  @extend .d-flex, .align-items-center;
+}
+
+.align-center-col {
+  @extend .align-center, .flex-column;
+}
+
+.justify-center {
+  @extend .d-flex, .justify-content-center;
+}
+
+.justify-center-col {
+  @extend .justify-center, .flex-column;
+}
+
+.justify-around {
+  @extend .d-flex, .justify-content-around;
+}
+
+.justify-between {
+  @extend .d-flex, .justify-content-between;
+}
+
+.justify-end {
+  @extend .d-flex, .justify-content-end;
+}
+
+.field-label {
+  @extend .text-coal, .fw-600, .text-large, .mt-20, .mb-4;
+  font-variant: small-caps;
+}
+
+.field-label-req {
+  @extend .text-coal, .fw-600, .text-large, .mt-20, .mb-4;
+  font-variant: small-caps;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    font-family: "leadRat" !important;
+    content: "\e923";
+    color: $red-10;
+    font-size: 7px;
+    position: absolute;
+    top: -2px;
+    right: -10px;
+  }
+}
+
+.form-group {
+  @extend .border-gray, .bg-white, .p-12;
+  border-radius: 5px;
+
+  input,
+  textarea {
+    @extend .w-100, .text-normal, .text-coal, .border-0;
+
+    &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    &::placeholder {
+      @extend .fw-semi-bold, .text-sm;
+      color: $slate-40;
+    }
+  }
+}
+
+ng-select {
+  @extend .border-gray;
+  background-color: $dark-500;
+  border-radius: 5px;
+}
+
+.ng-select .ng-arrow-wrapper .ng-arrow {
+  @extend .text-coal;
+}
+
+.ng-select.ng-select-focused .ng-select-container .ng-arrow-wrapper .ng-arrow {
+  @extend .text-coal;
+}
+
+.ng-select .ng-has-value .ng-placeholder,
+.ng-select.ng-select-opened .ng-placeholder {
+  display: none;
+}
+
+.ng-select.ng-select-focused
+  .ng-select-container
+  .ng-value-container
+  .ng-placeholder {
+  display: none;
+}
+
+.ng-select .ng-select-container .ng-value-container .ng-placeholder {
+  @extend .fw-semi-bold, .text-sm;
+  color: $slate-40;
+}
+
+.ng-select-container::after {
+  display: none;
+}
+
+.ng-select .ng-clear-wrapper {
+  display: none;
+}
+
+.ng-select .ng-select-container {
+  @extend .text-coal;
+}
+
+.field-tag {
+  ng-select {
+    @extend .bg-white;
+  }
+
+  .ng-select .ng-arrow-wrapper .ng-arrow {
+    @extend .d-none;
+  }
+
+  .ng-select.ng-select-focused
+    .ng-select-container
+    .ng-arrow-wrapper
+    .ng-arrow {
+    @extend .d-none;
+  }
+
+  .search {
+    @extend .border-gray, .position-absolute;
+    background-color: $dark-500;
+    border-radius: 5px;
+    margin: 3px;
+    padding: 17px;
+    top: 0;
+    right: 0;
+  }
+}
+
+.field-rupees-tag {
+  .form-group {
+    padding-left: 40px !important;
+  }
+
+  .rupees {
+    @extend .border-gray, .position-absolute;
+    background-color: $dark-500;
+    border-radius: 5px;
+    margin: 3px;
+    padding: 17px;
+    top: 0;
+    left: 0;
+  }
+}
+
+.box-radio {
+  .btn {
+    @extend .text-sm;
+    padding: 10px 14px;
+    background-color: $white;
+    border-radius: 5px;
+    border: 1px solid $dark-400 !important;
+    font-variant: small-caps;
+  }
+
+  .btn-check:checked + .btn {
+    background: $accent-green;
+    border: 1px solid $accent-green !important;
+    box-shadow: 0px 4px 4px rgba(80, 190, 167, 0.2) !important;
+  }
+}
+
+.img-radio {
+  .btn {
+    @extend .clear-padding;
+    border-radius: 7px;
+    border: 1px solid $dark-400 !important;
+    filter: grayscale(100%);
+    background-color: $dark-400;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+
+    img {
+      mix-blend-mode: hard-light;
+    }
+  }
+
+  .text-label {
+    @extend .position-absolute, .text-xs;
+    top: 5px;
+    left: 5px;
+  }
+
+  .btn-check + .btn:hover {
+    background-color: $dark-400;
+  }
+
+  .btn-check:checked + .btn {
+    @extend .text-coal, .fw-700;
+    filter: unset;
+    background: unset;
+    border: unset !important;
+    box-shadow: 0px 12px 15px -10px #afb2c6 !important;
+
+    img {
+      mix-blend-mode: unset;
+    }
+
+    &.residential {
+      box-shadow: 0px 12px 15px -10px #c1d5db !important;
+    }
+
+    &.commercial {
+      box-shadow: 0px 12px 15px -10px #91c9e1 !important;
+    }
+
+    &.agricultural {
+      box-shadow: 0px 12px 15px -10px #e0d751 !important;
+    }
+  }
+}
+
+.prop-phone {
+  @extend .position-relative, .px-12, .pt-16;
+  border: 5px solid $dark-800;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  border-bottom: 0;
+}
+
+.neg-block {
+  @extend .flex-between,
+    .bg-accent-green,
+    .border-radius-50,
+    .w-60,
+    .text-white,
+    .fw-600,
+    .text-xs-xs;
+  padding: 2px 5px;
+  margin-top: 2px;
+}
+
+.seat-available{
+  border: 2px solid black;
+width: 20px;
+height: 20px;
+}
+.seat-unavailable{
+  border: 2px solid rgb(88, 84, 84);
+  background-color: rgb(88, 84, 84);
+  width: 20px;
+  height: 20px;
+}
+.seat-selection{
+  border: 2px solid green;
+  background-color: green;
+  width: 20px;
+  height: 20px;
+}
+.button-position{
+  position: absolute;
+  left: 550px;
+}
+
+

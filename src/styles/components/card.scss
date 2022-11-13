@@ -1,0 +1,82 @@
+.card {
+    @extend .m-20;
+}
+
+.card-content {
+    background-color: $white;
+
+    .card {
+        border: none !important;
+    }
+}
+
+.task-card-left {
+    height: 100%;
+
+    .card {
+        width: 150px;
+    }
+}
+
+.task-card-right {
+    overflow: auto;
+    height: calc(100vh - 52px);
+}
+
+
+.card {
+    &.card-sm {
+        width: 150px;
+        height: 125px;
+    }
+}
+
+// clear padding styles
+.clear-padding {
+    @extend .p-0;
+}
+
+.clear-padding-t,
+.clear-padding-y {
+    @extend .pt-0;
+}
+
+.clear-padding-r,
+.clear-padding-x {
+    @extend .pr-0;
+}
+
+.clear-padding-b,
+.clear-padding-y {
+    @extend .pb-0;
+}
+
+.clear-padding-l,
+.clear-padding-x {
+    @extend .pl-0;
+}
+
+// clear margin styles
+.clear-margin {
+    @extend .m-0;
+}
+
+.clear-margin-t,
+.clear-margin-y {
+    @extend .mt-0;
+}
+
+.clear-margin-r,
+.clear-margin-x {
+    @extend .mr-0;
+}
+
+.clear-margin-b,
+.clear-margin-y {
+    @extend .mb-0;
+}
+
+.clear-margin-l,
+.clear-margin-x {
+    @extend .ml-0;
+}

@@ -1,0 +1,53 @@
+.coldt-layout {
+    display: flex;
+
+    .left-container {
+        min-width: 260px;
+        width: 260px;
+
+        .nav-list-card {
+            @extend .m-0;
+        }
+
+        &.xl {
+            width: 380px;
+            min-width: 380px;
+        }
+
+        &.large {
+            width: 350px;
+            min-width: 350px;
+        }
+
+        &.medium {
+            width: 300px;
+            min-width: 300px;
+        }
+
+        &.small {
+            width: 160px;
+            min-width: 160px;
+            @extend .text-normal;
+        }
+    }
+
+    .right-container {
+        flex-grow: 1;
+    }
+
+    &.settings {
+        .left-container {
+            min-width: 230px;
+            width: 230px;
+        }
+    }
+
+    &.coldt-layout-inverse {
+        @extend .flex-row-reverse;
+
+        .right-container {
+            @extend .mr-20;
+            @extend .ml-0;
+        }
+    }
+}
